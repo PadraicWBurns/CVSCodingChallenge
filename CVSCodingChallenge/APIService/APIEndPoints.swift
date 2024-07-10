@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct APIEndPoints{
+struct APIEndPoints {
     static var BaseURL    = "https://api.flickr.com/"
     static var SearchPath = "services/feeds/photos_public.gne?format=json&nojsoncallback=1&tags="
 }

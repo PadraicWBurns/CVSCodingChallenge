@@ -14,7 +14,6 @@ enum HomeViewState {
 }
 
 final class PhotoSearchViewModel: ObservableObject {
-   // @Published var photosList = [Photo]()
     @Published var homeViewState = HomeViewState.load([])
 
     private var searchedWord = PassthroughSubject<String, Error>()

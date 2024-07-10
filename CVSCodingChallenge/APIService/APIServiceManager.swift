@@ -14,13 +14,13 @@ struct APIServiceManager {
     }
 }
 
-extension APIServiceManager: APIServiceManagerProtocol{
+extension APIServiceManager: APIServiceManagerProtocol {
     func getDataForRequest<T>(url: URL, type: T.Type) async throws -> T where T : Decodable {
         let (data, respone) = try await urlSession.data(from: url)
-        guard let httpResponse = (respone as? HTTPURLResponse)else{
+        guard let httpResponse = (respone as? HTTPURLResponse) else {
             throw APIServiceError.dataNotFound
         }
-        guard (200...299).contains(httpResponse.statusCode) else{
+        guard (200...299).contains(httpResponse.statusCode) else {
             throw APIServiceError.responseError(httpResponse.statusCode)
         }
         let jsonDecoder = JSONDecoder()

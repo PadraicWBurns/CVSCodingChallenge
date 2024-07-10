@@ -31,7 +31,7 @@ struct Media: Decodable {
 }
 
 extension Photo: Identifiable {
-    var id: String{
+    var id: String {
         return  dateTaken
     }
 }

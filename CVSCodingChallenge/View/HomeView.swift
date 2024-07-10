@@ -13,7 +13,7 @@ struct HomeView: View {
     @State var searchText:String = ""
     
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             VStack {
                 switch photoSearchViewModel.homeViewState {
                 case .load(let photos):
